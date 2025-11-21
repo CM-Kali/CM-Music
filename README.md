@@ -17,13 +17,34 @@ This app is **beginner-friendly** and optimized for local music playback, making
 ## 📂 Project Structure
 ```
 lib/
-├── main.dart # App entry point
-├── app/ # App setup (themes, routes)
-├── core/ # Constants & utility functions
-├── data/ # Models and audio service
-├── domain/ # Entities
-├── presentation/ # Pages and controllers
-└── assets/ # Audio files, images, fonts
+├── main.dart                  # Entry point
+├── app/
+│   ├── app.dart               # App setup (themes, routing)
+│   ├── routes.dart            # Simple route management
+│   └── theme.dart             # Light/Dark theme
+├── core/
+│   ├── constants.dart         # App constants, colors
+│   └── utils.dart             # Helper functions, extensions
+├── data/
+│   ├── models/
+│   │   └── song_model.dart    # Song metadata (title, path, duration)
+│   └── services/
+│       └── audio_service.dart # Local audio playback logic
+├── domain/
+│   └── entities/
+│       └── song.dart          # Song entity for app logic
+├── presentation/
+│   ├── controllers/
+│   │   └── music_controller.dart # Controls playback, playlists
+│   └── pages/
+│       ├── home_page.dart
+│       ├── player_page.dart
+│       └── playlist_page.dart
+└── assets/
+    ├── audio/                 # Local music files
+    ├── images/                # App icons, backgrounds
+    └── fonts/                 # Optional custom fonts
+
 ```
 
 ## ⚡ Features
